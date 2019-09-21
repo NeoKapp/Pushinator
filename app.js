@@ -30,7 +30,7 @@ var p = new Push( {
  
 var msg = {
   // These values correspond to the parameters detailed on https://pushover.net/api
-  message: 's',	// required
+  message: '',	// required
   title: "",
   sound: 'magic',
   device: '',
@@ -49,7 +49,7 @@ app.post('/api', (req, res) => {
   }
   else{
     p.send(msg, function(err, result){
-    if ( err ) { 
+    if(err){ 
       throw err
     }
     console.log(result)
