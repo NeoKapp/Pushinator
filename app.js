@@ -41,7 +41,7 @@ app.get('/',  (req, res) => {
   res.send("hello");
 })
 
-app.post('/', (req, res) => {
+app.post('/api', (req, res) => {
   console.log(req.body.message)
   msg.message = req.body.message
   p.send(msg, function(err, result){
@@ -49,6 +49,7 @@ app.post('/', (req, res) => {
       throw err
     }
     console.log(result)
+    res.status(200).end()
   })
 })
 
