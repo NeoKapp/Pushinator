@@ -1,0 +1,28 @@
+{
+  "name": "pushinator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "helmet": "^3.21.0",
+    "morgan": "^1.9.1",
+    "pushover-notifications": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeoKapp/Pushinator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NeoKapp/Pushinator/issues"
+  },
+  "homepage": "https://github.com/NeoKapp/Pushinator#readme"
+}
