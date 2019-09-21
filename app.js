@@ -44,13 +44,18 @@ app.get('/',  (req, res) => {
 app.post('/api', (req, res) => {
   console.log(req.body.message)
   msg.message = req.body.message
-  p.send(msg, function(err, result){
-    if ( err ) {
+  if(!msg.message){
+    res.status(406).send("Not enough parameters\n").end()
+  }
+  else{
+    p.send(msg, function(err, result){
+    if ( err ) { 
       throw err
     }
     console.log(result)
     res.status(200).end()
-  })
+    })
+  }
 })
 
 app.listen(3001, async () => {
